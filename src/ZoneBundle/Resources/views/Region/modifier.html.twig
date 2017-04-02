@@ -1,0 +1,52 @@
+{% if app.request.hasPreviousSession %}
+    {% for flashMessage in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>{{ flashMessage }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+<form class="formulaire" action="{{ path('zone_modifier_region', {'id': id}) }}" novalidate  method="post" {{ form_enctype(form) }}>
+    <div class="modal-body">
+        <div class="well">
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.regionCode,"Code de la région") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.regionCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required">
+                        {{ form_errors(form.regionCode)}}
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.regionLibelle,"Désignation de la région") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.regionLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required">
+                        {{ form_errors(form.regionLibelle)}}
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            {{form_rest(form)}}
+        </div>
+    </div>
+
+    <div class="item form-group modal-footer">
+        <div class="col-sm-9">
+            <div class="pull-right">
+                <button class="btn btn-warning" enabled=false id="sub" type="submit">Effectuer</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</form>

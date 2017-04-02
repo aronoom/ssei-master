@@ -1,0 +1,8 @@
+Cem\UserBundle\Entity\Agent:
+    properties:
+        email:
+        username:
+            - Regex:
+                pattern: '/^[a-zA-Z0-9 ]+$/'
+                match:   true
+                message: Le nom d'utilisateur ne doit pas comporter des caractères spéciaux

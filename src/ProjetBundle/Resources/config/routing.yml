@@ -1,0 +1,200 @@
+#projet_homepage:
+#    path:     /
+#    defaults: { _controller: ProjetBundle:Projet:index }
+
+projet_checkUser:
+    path:     /check
+    defaults: { _controller: ProjetBundle:Projet:check }
+
+# here begin all Aro Routings
+projet_homepage:
+    path:     /
+    defaults: { _controller: ProjetBundle:Projet:lister }
+
+projet_index:
+    path:     /{id}
+    defaults: { _controller: ProjetBundle:Projet:index }
+    requirements:
+        id: \d+
+
+projet_ajouter:
+    path:     /ajouter
+    defaults: { _controller: ProjetBundle:Projet:ajouter }
+
+projet_supprimer:
+    path:     /supprimer
+    defaults: { _controller: ProjetBundle:Projet:supprimer }
+
+projet_modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: ProjetBundle:Projet:modifier }
+
+#composante and activity
+projet_lister_composante:
+    path:     /{projet_id}/composante
+    defaults: { _controller: ProjetBundle:Composante:lister }
+    requirements:
+        id: \d+
+
+projet_ajouter_composante:
+    path:     /{projet_id}/composante/ajouter
+    defaults: { _controller: ProjetBundle:Composante:ajouter }
+
+projet_modifier_composante:
+    path:     /{projet_id}/composante/modifier/{id}
+    defaults: { _controller: ProjetBundle:Composante:modifier }
+
+projet_supprimer_composante:
+    path:     /{projet_id}/composante/supprimer
+    defaults: { _controller: ProjetBundle:Composante:supprimer }
+
+
+
+projet_lister_activite:
+    path:     /{projet_id}/composante/{comp_id}/activite
+    defaults: { _controller: ProjetBundle:Activite:lister }
+
+projet_ajouter_activite:
+    path:     /{projet_id}/composante/{comp_id}/activite/ajouter
+    defaults: { _controller: ProjetBundle:Activite:ajouter }
+
+projet_modifier_activite:
+    path:     /{projet_id}/composante/{comp_id}/activite/modifier/{id}
+    defaults: { _controller: ProjetBundle:Activite:modifier }
+
+projet_supprimer_activite:
+    path:     /{projet_id}/composante/{comp_id}/activite/{idActivite}/supprimer
+    defaults: { _controller: ProjetBundle:Activite:supprimer }
+
+#end
+
+#descriptif de chaque activité
+projet_descriptif_activite_lister:
+    path:     /{projet_id}/composant/{comp_id}/activite/{act_id}/descriptif
+    defaults: { _controller: ProjetBundle:DescriptifActivite:lister }
+
+projet_descriptif_activite_ajouter:
+    path:     /{projet_id}/composant/{comp_id}/activite/{act_id}/descriptif/ajouter
+    defaults: { _controller: ProjetBundle:DescriptifActivite:ajouter }
+    requirements:
+        projet_id: \d+
+        comp_id: \d+
+        act_id: \d+
+
+#l'id à partir d'ici est celui du descriptifProjet car a partir de ce dernier qu'on va accesser
+#ses attributs
+projet_descriptif_activite_modifier:
+    path:     /{projet_id}/composant/{comp_id}/activite/{act_id}/descriptif/modifier/{idDescriptifParUi}
+    defaults: { _controller: ProjetBundle:DescriptifActivite:modifier }
+
+projet_descriptif_activite_supprimer:
+    path:     /{projet_id}/composant/{comp_id}/activite/{act_id}/descriptif/supprimer
+    defaults: { _controller: ProjetBundle:DescriptifActivite:supprimer }
+
+#//descriptif du projet
+projet_descriptif_ajouter:
+    path:     /{id}/descriptif/ajouter
+    defaults: { _controller: ProjetBundle:Descriptif:ajouter }
+
+#l'id à partir d'ici est celui du descriptifProjet car a partir de ce dernier qu'on va accesser
+#ses attributs
+projet_descriptif_modifier:
+    path:     /{idDescriptifProjet}/descriptif/modifier/{idDescriptifParUi}
+    defaults: { _controller: ProjetBundle:Descriptif:modifier }
+
+projet_descriptif_supprimer:
+    path:     /descriptif/supprimer
+    defaults: { _controller: ProjetBundle:Descriptif:supprimer }
+
+#ajout d'une situation annuelle d'un descriptif à partir d'un descriptifParUI
+#remarque:en ayant l'id du descriptif on peut accesser directement au descriptifParUi(1)
+projet_descriptif_situation_annuelle_liste:
+    path:     /{idDescriptifProjet}/descriptif/{idDescriptifParUi}/liste_situation_annuelle
+    defaults: { _controller: ProjetBundle:SituationAnnuelle:liste }
+projet_descriptif_situation_annuelle_ajouter:
+    path:     /{idDescriptifProjet}/descriptif/{idDescriptifParUi}/liste_situation_annuelle/ajouter
+    defaults: { _controller: ProjetBundle:SituationAnnuelle:ajouter }
+
+projet_descriptif_situation_annuelle_modifier:
+    path:     /{idDescriptifProjet}/descriptif/{idDescriptifParUi}/liste_situation_annuelle/{idSituationAnnuelle}/modifier
+    defaults: { _controller: ProjetBundle:SituationAnnuelle:modifier }
+
+projet_descriptif_situation_annuelle_supprimer:
+    path:     /{idDescriptifProjet}/situation_annuelle/supprimer
+    defaults: { _controller: ProjetBundle:SituationAnnuelle:supprimer }
+
+#here begins objectif
+projet_descriptif_situation_annuelle_objectif_liste:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/liste
+    defaults: { _controller: ProjetBundle:Objectif:liste }
+projet_descriptif_situation_annuelle_objectif_ajouter:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/ajouter
+    defaults: { _controller: ProjetBundle:Objectif:ajouter }
+projet_descriptif_situation_annuelle_objectif_modifier:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/{idObjectif}/modifier
+    defaults: { _controller: ProjetBundle:Objectif:modifier }
+projet_descriptif_situation_annuelle_objectif_supprimer:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/modifier
+    defaults: { _controller: ProjetBundle:Objectif:supprimer }
+
+#here begins objectif for descriptif activite
+projet_descriptif_activite_situation_annuelle_objectif_liste:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/objectifs/liste
+    defaults: { _controller: ProjetBundle:ObjectifDA:liste }
+projet_descriptif_activite_situation_annuelle_objectif_liste_ajouter:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/objectifs/ajouter
+    defaults: { _controller: ProjetBundle:ObjectifDA:ajouter }
+projet_descriptif_activite_situation_annuelle_objectif_liste_modifier:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/objectifs/{idObjectif}/modifier
+    defaults: { _controller: ProjetBundle:ObjectifDA:modifier }
+projet_descriptif_activite_situation_annuelle_objectif_liste_supprimer:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/objectifs/supprimer
+    defaults: { _controller: ProjetBundle:ObjectifDA:supprimer }
+
+
+#here begins realisation
+projet_descriptif_situation_annuelle_realisation_liste:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/liste
+    defaults: { _controller: ProjetBundle:Realisation:liste }
+projet_descriptif_situation_annuelle_realisation_ajouter:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/ajouter
+    defaults: { _controller: ProjetBundle:Realisation:ajouter }
+projet_descriptif_situation_annuelle_realisation_modifier:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/{idRealisation}/modifier
+    defaults: { _controller: ProjetBundle:Realisation:modifier }
+projet_descriptif_situation_annuelle_realisation_supprimer:
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/supprimer
+    defaults: { _controller: ProjetBundle:Realisation:supprimer }
+
+
+#here begins realisation for descriptif_activite
+projet_descriptif_activite_situation_annuelle_realisation_liste:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/realisation/liste
+    defaults: { _controller: ProjetBundle:RealisationDA:liste }
+projet_descriptif_activite_situation_annuelle_realisation_ajouter:
+    path:     projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/realisation/ajouter
+    defaults: { _controller: ProjetBundle:RealisationDA:ajouter }
+projet_descriptif_activite_situation_annuelle_realisation_modifier:
+    path:     projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/realisation/modifier/{idRealisation}
+    defaults: { _controller: ProjetBundle:RealisationDA:modifier }
+projet_descriptif_activite_situation_annuelle_realisation_supprimer:
+    path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/realisation/supprimer
+    defaults: { _controller: ProjetBundle:RealisationDA:supprimer }
+
+
+#situation annuelle pour acitivite_descriptif
+
+projet_descriptif_activite_situation_annuelle_liste:
+    path:     /{idActivite}/descriptif/{idDescriptifParUi}/liste_situation_annuelle_descriptif_acitivite
+    defaults: { _controller: ProjetBundle:SituationDescriptifActivite:liste }
+projet_descriptif_activite_situation_annuelle_ajouter:
+    path:     /{idActivite}/descriptif/{idDescriptifParUi}/liste_situation_annuelle_descriptif_acitivite/ajouter
+    defaults: { _controller: ProjetBundle:SituationDescriptifActivite:ajouter }
+
+projet_descriptif_activite_situation_annuelle_modifier:
+    path:     /{idActivite}/descriptif/{idDescriptifParUi}/liste_situation_annuelle_descriptif_acitivite/{idSituationAnnuelle}/modifier
+    defaults: { _controller: ProjetBundle:SituationDescriptifActivite:modifier }
+
+projet_descriptif_activite_situation_annuelle_supprimer:
+    path:     /{idActivite}/liste_situation_annuelle_descriptif_acitivite/supprimer
+    defaults: { _controller: ProjetBundle:SituationDescriptifActivite:supprimer }

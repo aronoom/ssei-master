@@ -1,0 +1,204 @@
+{% extends "IndicateurBundle::layout.html.twig"%}
+{% block title %} {{parent()}} Ajout{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Indicateurs</h3>
+                <ol class="breadcrumb">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="{{ path('indicateur_liste') }}">Indicateurs </a></li>
+                    <li class="active">Ajouter</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Ajouter un indicateur</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.libelleIndicateur,"Désignation de l'indicateur") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.libelleIndicateur,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.libelleIndicateur)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.description,"Description") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.description,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 optional', 'placeholder': 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.description)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.types,"Types") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.types,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 optional select2_multiple', 'placeholder': 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.types)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.nature,"Nature") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.nature,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.nature)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.activite,"Activité") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.activite,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.activite)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.periodicite,"Périodicité") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.periodicite,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.periodicite)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.modeCalcul,"Mode de calcul") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.modeCalcul,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.modeCalcul)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.sousSecteur,"Sous secteur") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.sousSecteur,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.sousSecteur)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.subdivisions,"Subdivisions") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.subdivisions,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 select2_multiple optional', 'placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.subdivisions)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                {{ form_widget(form.save) }}
+                                <a href="{{ path('indicateur_liste') }}">
+                                    <button type="button" class="btn btn-success" >Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('vendors/validator/validator.js')}}"></script>
+    <script>
+        $('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        $('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply($(this).siblings().last()[0]);
+        });
+        $('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 10,
+                placeholder : "Ce champ est facultatif",
+                allowClear: true,
+            });
+            $('select').toggleClass('required');
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,30 @@
+1-Pour adapter l'application au sgbd MYSQL : 
+veuillez modifier le fichier suivant :  app/config/parameters.yml
+
+Le contenu du fichier parameters.yml 
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: procdb
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 1895c3059a14573a23aa63b6d989a77dd3877cca
+
+puis le database_name et database_password par le login et mot de passe de votre session MYSQL
+
+2- Puis veuillez importer la base de donnée par le fichier procdb.sql 
+3- Les sessions déja présentes pour le test sont :
+Administrateur : 
+  login:  admin
+  password :admin
+Utilisateur : 
+  login:  tojo
+  password : tojo
+  
+ Remarque si des problèmes subsistent, veuillez vider le cache de l'application par les commandes suivantes :
+  php app/console cache:clear
+  

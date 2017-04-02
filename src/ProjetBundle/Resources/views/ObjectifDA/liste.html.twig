@@ -1,0 +1,142 @@
+{% extends "UserBundle::layout.html.twig"%}
+{% block title %} {{parent()}} objectifs {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <ol class="breadcrumb row">
+                    <li><a href="#"> Acceuil </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id':projet_id }) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': act_id }) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id ,'act_id': act_id }) }}"> Descriptif </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_situation_annuelle_liste',{'idActivite': act_id ,'idDescriptifParUi': idDescriptifParUi})}}">Situation annuelle</a></li>
+                    <li class="active"> Objectifs </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="dashboard_graph">
+                    <div class="clear_fix"></div>
+                    <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste_ajouter',{'projet_id': projet_id,'comp_id': comp_id , 'act_id': act_id,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle':situationAnnuelle.id}) }}">
+                        <button class="btn btn-primary pull-left" id="ajouterGroup">Ajouter un objectif</button>
+                    </a>
+                    <div class="clear_fix"></div>
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Liste des objectifs de la situation annuelle annuelle {{ situationAnnuelle.id }}</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="col-sm-12">
+                            <table id="objectifTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%">
+                                <thead>
+                                    <th>#</th>
+                                    <th>Valeur</th>    
+                                    <th>Date</th>
+                                    <th style="width:10%;">Actions</th>
+                                </thead>
+                                <tbody>
+                                    {% for objectif in objectifs %}
+                                    <tr>
+                                         <td>{{objectif.id}}</td>
+                                         <td>{{objectif.valeur}}</td>
+                                         <td>{{objectif.date|date('d/m/Y')}}</td>
+                                        <td >
+                                        <div class="btn-group">
+                                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste_modifier',{'projet_id': projet_id,'comp_id': comp_id , 'act_id': act_id,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle':situationAnnuelle.id ,'idObjectif':objectif.id}) }}">
+                                                <button type="button" data-toggle="tooltip" title data-original-title="Objectif" class="btn btn-default btn-sm" aria-label="Center Align">
+                                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                                </button>
+                                            </a>                                                                                        
+                                            <a>
+                                                <button type="button" data-toggle="tooltip" title data-original-title="Supprimer" class="btn btn-danger btn-sm delete-btn" aria-label="Justify" data-toggle="modal" data-target="#modal{{ objectif.id }}">
+                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <!-- -->
+                                        <div class="modal fade bs-example-modal-sm" data-id="" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                        </button>
+                                                        <h4 class="modal-title" id="myModalLabel2">Suppression</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4>
+                                                            <p>Voulez-vous vraiment supprimer?</p>
+                                                        </h4>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form action="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste_supprimer',{'projet_id': projet_id,'comp_id': comp_id , 'act_id': act_id,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle':situationAnnuelle.id }) }}" method="post">
+                                                            <input type="hidden" id="idObjectif" name="idObjectif" value="">
+                                                            <button type="submit" id="modalSuppr" class="btn btn-danger">Supprimer</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                    <th>#</th>
+                                    <th>Valeur</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="clearfix">
+                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_liste',{'idActivite': act_id ,'idDescriptifParUi': idDescriptifParUi})}}">
+                                <button class="btn btn-success">Retour</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}    
+    <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/datatables.min.js')}}"></script>  
+    <script type="text/javascript" src="{{asset('js/bootstrap_dropdown_6.js')}}"></script>    
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#objectifTable').dataTable();
+
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 10,
+                placeholder : "Veuillez ajouter",
+                allowClear: true,
+            });
+            $('select').toggleClass('required');
+
+            $('.delete-btn').on('click',function(){
+                var _this = $(this);
+                var _parent = $(_this).parents()[3];
+                var node = $($(_parent).children()[0]);
+                console.log($(node).text());
+                $('#idObjectif').val($(node).text());
+                $('#modalDelete').modal('toggle');
+            });
+        });
+    </script>
+{% endblock %}

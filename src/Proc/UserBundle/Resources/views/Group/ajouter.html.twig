@@ -1,0 +1,111 @@
+{% extends "UserBundle::layout.html.twig"%}
+{% block title %} {{parent()}} Groupes {% endblock %}
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Utilisateurs</h3>
+                <ol class="breadcrumb">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="{{ path('groupe_user_liste') }}">Groupes</a></li>
+                    <li class="active">Ajouter</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Ajouter une groupe</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        {% if app.request.hasPreviousSession %}
+                            {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Erreur! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Success! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.codeGroupUser,"Code du groupe") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.codeGroupUser,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.codeGroupUser)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.nomGroupUser,"Nom du groupe") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.nomGroupUser,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.nomGroupUser)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                {{ form_widget(form.save) }}
+                                <button type="reset" class="btn btn-success" onclick="history.go(-1);">Retour</button>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('vendors/validator/validator.js')}}"></script>
+    <script>
+        $('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        $('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply($(this).siblings().last()[0]);
+        });
+        $('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src="{{ asset('js/jquery.validate.js') }}"></script>
+
+{% endblock %}

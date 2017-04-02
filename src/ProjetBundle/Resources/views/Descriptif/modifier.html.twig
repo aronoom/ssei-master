@@ -1,0 +1,208 @@
+{% extends "UserBundle::layout.html.twig"%}
+{% block title %} {{parent()}} Descriptif {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <ol class="breadcrumb">
+                    <li><a href="">Acceuil</a></li>
+                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
+                    <li><a href="{{ path('projet_index',{'id':projet.id}) }}">Descriptif</a></li>
+                    <li class="active"> Modifier</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Modifier le descriptif du projet : {{ projet.nomProjet }}</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        <form action="" method="POST" id="demo-form2" class="form-horizontal form-label-left" data-parsley-validate="true" novalidate>
+                            {% if app.request.hasPreviousSession %}
+                                {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                    <div class="alert alert-danger alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <strong>Erreur! </strong>{{ flashMessage }}
+                                    </div>
+                                {% endfor %}
+                                {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <strong>Success! </strong>{{ flashMessage }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="item form-group">
+                                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Indicateurs
+                                </div>
+                                <div class="col-sm-3">
+                                    <select class="form-control col-md-7 col-xs-12" name="indicateur" value="">     
+                                        {% for indic in indicateurs %}
+                                        	<option value="{{ indic.id }}" {% if indic.libelleIndicateur == descriptifParUi.indicateur.libelleIndicateur %}selected="selected"{% endif %}>{{ indic.libelleIndicateur }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Unité
+                                </div>
+                                <div class="col-sm-3">
+                                    <select class="form-control col-md-7 col-xs-12 select2_multiple" name="unite[]" multiple="multiple">
+                                        {% for unite in unites %}
+                                        <option value="{{ unite.id }}">{{ unite.libelleUnite }}</option>
+                                        {% endfor %}
+                                    </select>                                    
+                                   
+                                </div>
+                                <ul class="parsley-errors-list filled">
+                                    <li class="parsley-required">
+                                    </li>
+                                </ul>
+                            </div>
+                                <div class="item form-group">
+                                    <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Commune de la région
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <select class="form-control col-md-7 col-xs-12 select2_multiple" name="commune[]"  multiple="multiple">
+                                            {% for region in regions %}
+                                            <optgroup label="{{ region.regionLibelle }}">
+                                                {% for district in region.districts %}
+                                                    {% for commune in district.getCommunes %}
+                                                    <option value="{{ commune.id }}">{{ commune.communeLibelle }}</option>
+                                                    {% endfor %}
+                                                {% endfor %}
+                                            </optgroup>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <ul class="parsley-errors-list filled">
+                                        <li class="parsley-required">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item form-group">
+                                    <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Baseline
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="number" class="required form-control col-md-7 col-xs-12" name="baseline" value="{{descriptifParUi.baselineDescParUi}}" min="0">
+                                    </div>
+                                    <ul class="parsley-errors-list filled">
+                                        <li class="parsley-required">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item form-group">
+                                    <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Objectif
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="number" class="form-control col-md-7 col-xs-12" value="{{descriptifParUi.objectifDescParUi}}" min="0" name="objectif" >
+                                    </div>
+                                    <ul class="parsley-errors-list filled">
+                                        <li class="parsley-required">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item form-group">
+                                    <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Réalisation cumulée
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="number" class="form-control col-md-7 col-xs-12" name="realisation" value="{{descriptifParUi.realCumulParUi}}" min="0">
+                                    </div>
+                                    <ul class="parsley-errors-list filled">
+                                        <li class="parsley-required">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item form-group">
+                                    <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Explication
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <textarea name="explication" class="form-control col-md-7 col-xs-12" id="" cols="30" rows="3">{{descriptifParUi.explicationDescParUi}}</textarea>
+                                    </div>
+                                    <ul class="parsley-errors-list filled">
+                                        <li class="parsley-required">
+                                        </li>
+                                    </ul>
+                                </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <input type="submit" class="btn btn-primary" value="Soumettre">
+                                    <a href="{{ path('projet_index',{'id': projet.id }) }}">
+                                        <button type="button" class="btn btn-success" >Retour</button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('vendors/validator/validator.js')}}"></script>
+    <!-- validator -->
+    <script>
+        // initialize the validator function
+        validator.message.date = 'not a real date';
+
+        // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
+        $('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        $('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply($(this).siblings().last()[0]);
+        });
+
+        $('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 10,
+                placeholder : "Veuillez ajouter",
+                allowClear: true,
+            });
+            $('select').toggleClass('required');
+        });
+    </script>
+{% endblock %}

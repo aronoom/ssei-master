@@ -1,0 +1,75 @@
+{% if app.request.hasPreviousSession %}
+    {% for flashMessage in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>{{ flashMessage }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+<form class="formulaire" action="{{ path('zone_modifier_commune', {'district_id': district_id, 'region_id': region_id, 'id': id}) }}" novalidate  method="post" {{ form_enctype(form) }}>
+    <div class="modal-body">
+        <div class="well">
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.communeLibelle,"Désignation de la commune") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.communeLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required red">
+                        {{ form_errors(form.communeLibelle)}}
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.communeCode,"Code de la commune") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.communeCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required red">
+                        {{ form_errors(form.communeCode)}}
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            {{form_rest(form)}}
+        </div>
+    </div>
+
+    <div class="item form-group modal-footer">
+        <div class="pull-right">
+            <button class="btn btn-warning" enabled=false id="sub" type="submit">Effectuer</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        </div>
+    </div>
+</form>
+<script src="{{asset('vendors/validator/validator.js')}}"></script>
+<script>
+    $('form')
+            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+            .on('change', 'select.required', validator.checkField)
+            .on('keypress', 'input[required][pattern]', validator.keypress);
+
+    $('.multi.required').on('keyup blur', 'input', function() {
+        validator.checkField.apply($(this).siblings().last()[0]);
+    });
+    $('form').submit(function(e) {
+        e.preventDefault();
+        var submit = true;
+
+        // evaluate the form using generic validaing
+        if (!validator.checkAll($(this))) {
+            submit = false;
+        }
+
+        if (submit)
+            this.submit();
+
+        return false;
+    });
+</script>

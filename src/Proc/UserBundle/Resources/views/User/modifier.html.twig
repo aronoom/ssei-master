@@ -1,0 +1,223 @@
+{% extends "UserBundle::layout.html.twig"%}
+{% block title %} {{parent()}} Utilisateurs {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Utilisateurs</h3>
+                <ol class="breadcrumb">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="{{ path('user_admin_homepage') }}">Utilisateurs</a></li>
+                    <li class="active">Modifier</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Modifier un utilisateur</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        {% if app.request.hasPreviousSession %}
+                            {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Erreur! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Success! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.username,"Nom de l'utilisateur") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.username,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.username)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.prenom_user,"Prénom de l'utilisateur") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.prenom_user,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12' ,'placeholder' : 'ce champ est factultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.prenom_user)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.entites,"Entités") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.entites,{ 'attr' : { 'class':'form-control col-md-7 col-xs-12 select2_group'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.entites)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.contactAgent,"Contact") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.contactAgent,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12' ,'placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.contactAgent)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.email,'E-mail') }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.email,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.email)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.adresseAgent,'Adresse') }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.adresseAgent,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.adresseAgent)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.fonction_user,'Fonction') }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.fonction_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.fonction_user )}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.service_user,'Service') }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.service_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.service_user)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.direction_user,"Direction") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.direction_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.direction_user)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                {{ form_widget(form.save) }}
+                                <a href="{{ path('user_admin_homepage') }}">
+                                    <button type="button" class="btn btn-success">Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('vendors/validator/validator.js')}}"></script>
+    <script>
+        $('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        $('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply($(this).siblings().last()[0]);
+        });
+        $('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src="{{ asset('js/jquery.validate.js') }}"></script>
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".select2_single").select2({
+                placeholder: "Select a state",
+                allowClear: true
+            });
+            $(".select2_group").select2({});
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 10,
+                placeholder: "Entités",
+                allowClear: true
+            });
+        });
+    </script>
+{% endblock %}

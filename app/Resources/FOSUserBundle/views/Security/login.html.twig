@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block titre %}MPAE | Login{% endblock %}</title>
+        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('fonts/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">     
+        <link href="{{asset('css/custom.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}"/>       
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}" />
+        <style type="text/css">
+           .login-form {
+            width: 400px;
+            height: 400px;
+            }
+            body
+            {background-color: #f8f8f8;}
+        </style>        
+  </head>
+
+  <body class="login">
+    <div class="card card-container login-form">
+      <img id="profile-img" class="profile-img-card" src="{{asset('images/user.png')}}" />
+
+      <div class="login_wrapper">  
+        {% if error %}
+            <div class="alert alert-danger text-center" stlye="border-radius:10px;">
+            {{ error|trans({'Bad credentials': 'Login ou mot de passe incorrect'}) }}</div>            
+        {% endif %}                   
+        <div class="animate form login_form">
+          <section class="login_content">           
+            <form action="{{ path('fos_user_security_check') }}" method="post">
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+              <h1>MPAE </h1>
+              <div>
+                <input type="text" class="form-control" autocomplete="off" placeholder="Email ou nom d'utilisateur" name="_username" id="username" value="{{ last_username }}" required="required"/>
+              </div>
+              <div>
+                <input type="password" id="inputPassword" class="form-control" name="_password" required="required" placeholder="Mot de passe"/>
+              </div>         
+              <div>
+                <button class="btn" type="submit">Se connecter</button>
+                <!--<a class="reset_pass" href="{!{ path('fos_user_resetting_request') }}">Mot de passe perdu ?</a>-->
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                  <h3><i class="fa fa-tasks"></i> MPAE</h3>
+                  <p>© Copyright 2017</p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+
+ 
+      </div>
+    </div>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/login.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+
+  </body>
+</html>

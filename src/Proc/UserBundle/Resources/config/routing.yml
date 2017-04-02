@@ -1,0 +1,80 @@
+user_admin_homepage:
+    path:     /
+    defaults: { _controller: UserBundle:User:index }
+    options:
+        expose: true    
+user_admin_userList:
+    path:    /users
+    defaults: { _controller: UserBundle:User:userList }
+    options:
+        expose: true
+user_admin_userAdd:
+    path:    /users/ajouter
+    defaults: { _controller: UserBundle:User:userAdd }
+    options:
+        expose: true 
+    methods:  [GET, POST]
+user_admin_userEdit:
+    path:    /users/modifier/{id}
+    defaults: { _controller: UserBundle:User:userEdit }
+    options:
+        expose: true 
+    methods:  [GET, POST]
+user_admin_show:
+    path:    /users/show/{id}
+    defaults: { _controller: UserBundle:User:userShow }
+
+user_admin_userDel:
+    path:    /users/supprimer/
+    defaults: { _controller: UserBundle:User:userDel }
+    options: 
+        expose:  true
+    methods: [POST]
+
+#group
+groupe_user_liste:
+    path:     /groups
+    defaults: { _controller: UserBundle:Group:liste }
+
+groupe_user_ajouter:
+    path:     /groups/ajouter
+    defaults: { _controller: UserBundle:Group:ajouter }
+    options:
+        expose: true
+
+groupe_user_modifier:
+    path:     /groups/modifier/{id}
+    defaults: { _controller: UserBundle:Group:modifier }
+    options:
+        expose: true
+
+groupe_user_supprimer:
+    path:     /groups/supprimer
+    defaults: { _controller: UserBundle:Group:suppr }
+    options:
+        expose: true
+
+
+#entite
+entite_liste:
+    path:     /entites
+    defaults: { _controller: UserBundle:Entite:liste }
+
+entite_ajouter:
+    path:     /entites/ajouter
+    defaults: { _controller: UserBundle:Entite:ajouter }
+    options:
+        expose: true
+
+entite_modifier:
+    path:     /entites/modifier/{id}
+    defaults: { _controller: UserBundle:Entite:modifier }
+    options:
+        expose: true
+
+entite_supprimer:
+    path:     /entites/supprimer
+    defaults: { _controller: UserBundle:Entite:suppr }
+    options:
+        expose: true
+

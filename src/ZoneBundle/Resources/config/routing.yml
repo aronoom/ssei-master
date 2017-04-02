@@ -1,0 +1,77 @@
+zone_region:
+    path:     /
+    defaults: { _controller: ZoneBundle:Region:lister }
+    options:
+        expose: true
+
+zone_ajouter_region:
+    path:     /ajouter
+    defaults: { _controller: ZoneBundle:Region:ajouter }
+    options:
+        expose: true
+
+zone_supprimer_region:
+    path:     /supprimer
+    defaults: { _controller: ZoneBundle:Region:supprimer }
+    options:
+        expose: true
+
+zone_modifier_region:
+    path:     /modifier/{id}
+    defaults: { _controller: ZoneBundle:Region:modifier }
+    options:
+        expose: true
+
+
+
+
+zone_district:
+    path:     /{region_id}/district
+    defaults: { _controller: ZoneBundle:District:lister }
+    options:
+        expose: true
+
+zone_ajouter_district:
+    path:     /{region_id}/district/ajouter
+    defaults: { _controller: ZoneBundle:District:ajouter }
+    options:
+        expose: true
+
+zone_supprimer_district:
+    path:     /{region_id}/district/supprimer
+    defaults: { _controller: ZoneBundle:District:supprimer }
+    options:
+        expose: true
+
+zone_modifier_district:
+    path:     /{region_id}/district/modifier/{id}
+    defaults: { _controller: ZoneBundle:District:modifier }
+    options:
+        expose: true
+
+
+
+
+zone_commune:
+    path:     /{region_id}/district/{district_id}/commune
+    defaults: { _controller: ZoneBundle:Commune:lister }
+    options:
+        expose: true
+
+zone_ajouter_commune:
+    path:     /{region_id}/district/{district_id}/commune/ajouter
+    defaults: { _controller: ZoneBundle:Commune:ajouter }
+    options:
+        expose: true
+
+zone_supprimer_commune:
+    path:     /{region_id}/district/{district_id}/commune/supprimer
+    defaults: { _controller: ZoneBundle:Commune:supprimer }
+    options:
+        expose: true
+
+zone_modifier_commune:
+    path:     /{region_id}/district/{district_id}/commune/modifier/{id}
+    defaults: { _controller: ZoneBundle:Commune:modifier }
+    options:
+        expose: true

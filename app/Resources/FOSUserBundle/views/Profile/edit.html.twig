@@ -1,0 +1,12 @@
+{% extends "UserBundle::layout.html.twig" %}
+{% block title %}{{parent()}} Profile {% endblock %}
+{% block content %}
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="dashboard_graph">
+            <div class="row x_title">    
+                 <h3> Profile - Edit</h3>
+            </div>       
+{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+        </div>
+    </div>  
+{% endblock %}

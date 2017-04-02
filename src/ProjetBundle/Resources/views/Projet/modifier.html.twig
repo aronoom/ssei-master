@@ -1,0 +1,159 @@
+{% extends "ProjetBundle::layout.html.twig"%}
+{% block title %} {{parent()}} Utilisateurs {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="page-title">
+            <div class="title_left">
+                <ol class="breadcrumb">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
+                    <li class="active">Modification</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <h1>Projet</h1>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Modification</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        {% if app.request.hasPreviousSession %}
+                            {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Erreur! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Success! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.nomProjet,"Nom du projet") }}
+                            </div>
+                            <div class="col-sm-6">
+                                <li class="parsley-required">
+                                    {{ form_widget(form.nomProjet,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                </li>
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.nomProjet)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.objectifProjet,"Objectif") }}
+                            </div>
+                            <div class="col-sm-6">
+                                <li class="parsley-required">
+                                    {{ form_widget(form.objectifProjet,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                </li>
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.objectifProjet)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.entites,"Entités") }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.entites,{ 'attr' : { 'class':'form-control col-md-7 col-xs-12 select2_group'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.entites)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.regions,"Régions") }}
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form_widget(form.regions,{ 'attr' : { 'class':'form-control col-md-7 col-xs-12 select2_group'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.regions)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                {{ form_widget(form.save) }}
+                                <button type="reset" class="btn btn-success" onclick="history.go(-1);">Retour</button>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('vendors/validator/validator.js')}}"></script>
+    <script>
+        $('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        $('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply($(this).siblings().last()[0]);
+        });
+        $('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src="{{ asset('js/jquery.validate.js') }}"></script>
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(".select2_single").select2({
+            placeholder: "Select a state",
+            allowClear: true
+        });
+        $(".select2_group").select2({});
+        $(".select2_multiple").select2({
+            maximumSelectionLength: 10,
+            placeholder: "Enités",
+            allowClear: true
+        });
+    </script>
+{% endblock %}

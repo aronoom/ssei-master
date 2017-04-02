@@ -1,0 +1,160 @@
+{% extends "UserBundle::layout.html.twig"%}
+{% block title %}{{ parent() }} Utilisateurs{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">    
+{% endblock %}
+{% block content %}
+
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Utilisateurs</h3>
+                <ol class="breadcrumb">
+                   <li><a href="">Acceuil</a></li>
+                   <li><a >Admnistration</a></li>
+                   <li><a href="">Utilisateurs</a></li>
+                   <li class="active">Liste des utilisateurs</li>
+                </ol>
+            </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="dashboard_graph">
+        <a href="{{ path('user_admin_userAdd') }}">
+            <button class="btn btn-primary pull-right" id="ajouterAgent">Ajouter un utilisateur</button>
+        </a>
+        <div class=" x_panel">
+            
+            <div class="col-sm-12">
+                <table id="agentTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th style="display:none;">#</th>
+                            <th>Nom</th>
+                            <th>Prénom(s)</th>
+                            <th>Entité(s)</th>
+                            <th>E-mail</th>
+                            <th>Fonction</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for agent in agents %}
+                        <tr>
+                            <td style="display:none;">{{ agent.id }}</td>
+                            <td>{{ agent.username }}</td>
+                            <td>
+                                {% if agent.prenomUser != "" %}
+                                    {{ agent.prenomUser }}
+                                {% else %}
+                                    Aucun(s)
+                                {% endif %}
+                            </td>
+                            <td data-toggle="tooltip" data-original-title="">
+                                {% if agent.entites.count ==0 %}
+                                    Aucun
+                                {% else %}
+                                    {% for entity in agent.entites %}
+                                        -{{ entity.libelleEntite }}<br>
+                                    {% endfor %}
+                                {% endif %}
+                            </td>
+                            <td>{{ agent.email }}</td>
+                            <td>
+                                {% if agent.fonctionUser != "" %}
+                                    {{ agent.fonctionUser }}
+                                {% else %}
+                                    Aucun
+                                {% endif %}
+                            </td>
+                            <td >
+                                <div class="btn-group">
+                                    <a href="{{ path('user_admin_show',{'id' : agent.id }) }}">
+                                        <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title data-original-title="Détails" aria-label="Center Align">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </button>
+                                    </a>
+                                    <a href="{{ path('user_admin_userEdit',{'id' : agent.id }) }}">
+                                        <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title data-original-title="Modifier" aria-label="Center Align">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </button>
+                                    </a>
+                                    <a title data-original-title="Supprimer" data-toggle="tooltip">
+                                        <button type="button" class="btn btn-danger btn-sm delete-btn" aria-label="Justify" data-toggle="modal" data-target="#modal{{ agent.id }}">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- -->
+                                <div class="modal fade bs-example-modal-sm" data-id="" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel2">Suppression</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>
+                                                    <p>Voulez-vous vraiment supprimer?</p>
+                                                </h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="{{ path('user_admin_userDel') }}" method="post">
+                                                    <input type="hidden" id="idAgent" name="idAgent" value="">
+                                                    <button type="submit" id="modalSuppr" class="btn btn-danger">Supprimer</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- -->
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th style="display:none;">#</th>
+                            <th>Nom</th>
+                            <th>Prénom(s)</th>
+                            <th>Entité(s)</th>
+                            <th>E-mail</th>
+                            <th>Fonction</th>
+                            <th>Actions</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>            
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{parent()}}
+    <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/datatables.min.js')}}"></script>  
+    <script type="text/javascript" src="{{asset('js/bootstrap_dropdown_6.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/lang.js')}}"></script>
+    <script>
+        var table = $('#agentTable').DataTable({
+            language : lang
+        });
+        $(function(){
+
+            $('.delete-btn').on('click',function(){
+                var _this = $(this);
+                var _parent = $(_this).parents()[3];
+                var node = $($(_parent).children()[0]);
+
+                $('#idAgent').val($(node).text());
+                $('#modalDelete').modal('toggle');
+            });
+        });
+
+
+    </script>
+{% endblock %}

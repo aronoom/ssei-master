@@ -1,0 +1,203 @@
+indicateur_liste:
+    path:     /indicateur
+    defaults: { _controller: IndicateurBundle:Indicateur:liste }
+
+indicateur_ajouter:
+    path:     /indicateur/ajouter
+    defaults: { _controller: IndicateurBundle:Indicateur:ajouter }
+    options:
+        expose: true
+
+indicateur_listeAjax:
+    path:     /indicateur/listeN1/ajax
+    defaults: { _controller: IndicateurBundle:Indicateur:listeAjax }
+    options:
+        expose: true
+
+indicateur_modifier:
+    path:     /indicateur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Indicateur:modifier }
+    options:
+        expose: true
+
+indicateur_supprimer:
+    path:     /indicateur/supprimer/
+    defaults: { _controller: IndicateurBundle:Indicateur:suppr }
+    options:
+        expose: true
+
+#activite
+activite_liste:
+    path:     /activite
+    defaults: { _controller: IndicateurBundle:Activite:liste }
+
+activite_ajouter:
+    path:     /activite/ajouter
+    defaults: { _controller: IndicateurBundle:Activite:ajouter }
+    options:
+
+activite_modifier:
+    path:     /activite/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Activite:modifier }
+    options:
+
+activite_supprimer:
+    path:     /activite/supprimer
+    defaults: { _controller: IndicateurBundle:Activite:suppr }
+    options:
+        expose: true
+
+#mode de calcul
+modeCalcul_liste:
+    path:     /modeCalcul
+    defaults: { _controller: IndicateurBundle:ModeCalcul:liste }
+
+modeCalcul_ajouter:
+    path:     /modeCalcul/ajouter
+    defaults: { _controller: IndicateurBundle:ModeCalcul:ajouter }
+    options:
+
+modeCalcul_modifier:
+    path:     /modeCalcul/modifier/{id}
+    defaults: { _controller: IndicateurBundle:ModeCalcul:modifier }
+    options:
+
+modeCalcul_supprimer:
+    path:     /modeCalcul/supprimer
+    defaults: { _controller: IndicateurBundle:ModeCalcul:suppr }
+    options:
+        expose: true
+
+
+#nature
+nature_liste:
+    path:     /nature
+    defaults: { _controller: IndicateurBundle:Nature:liste }
+
+nature_ajouter:
+    path:     /nature/ajouter
+    defaults: { _controller: IndicateurBundle:Nature:ajouter }
+    options:
+
+nature_modifier:
+    path:     /nature/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Nature:modifier }
+    options:
+
+nature_supprimer:
+    path:     /nature/supprimer
+    defaults: { _controller: IndicateurBundle:Nature:suppr }
+    options:
+        expose: true
+
+#periodicite
+periodicite_liste:
+    path:     /periodicite
+    defaults: { _controller: IndicateurBundle:Periodicite:liste }
+
+periodicite_ajouter:
+    path:     /periodicite/ajouter
+    defaults: { _controller: IndicateurBundle:Periodicite:ajouter }
+    options:
+
+periodicite_modifier:
+    path:     /periodicite/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Periodicite:modifier }
+    options:
+
+periodicite_supprimer:
+    path:     /periodicite/supprimer
+    defaults: { _controller: IndicateurBundle:Periodicite:suppr }
+    options:
+        expose: true
+
+#sous secteur
+sous_secteur_liste:
+    path:     /sous_secteur
+    defaults: { _controller: IndicateurBundle:SousSecteur:liste }
+
+sous_secteur_ajouter:
+    path:     /sous_secteur/ajouter
+    defaults: { _controller: IndicateurBundle:SousSecteur:ajouter }
+    options:
+
+sous_secteur_modifier:
+    path:     /sous_secteur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:SousSecteur:modifier }
+    options:
+
+sous_secteur_supprimer:
+    path:     /sous_secteur/supprimer
+    defaults: { _controller: IndicateurBundle:SousSecteur:suppr }
+    options:
+        expose: true
+
+
+#subdivision
+subdivision_liste:
+    path:     /subdivision
+    defaults: { _controller: IndicateurBundle:Subdivision:liste }
+
+subdivision_ajouter:
+    path:     /subdivision/ajouter
+    defaults: { _controller: IndicateurBundle:Subdivision:ajouter }
+    options:
+
+subdivision_modifier:
+    path:     /subdivision/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Subdivision:modifier }
+    options:
+
+subdivision_supprimer:
+    path:     /subdivision/supprimer
+    defaults: { _controller: IndicateurBundle:Subdivision:suppr }
+    options:
+        expose: true
+
+#type_indicateur
+type_indicateur_liste:
+    path:     /type_indicateur
+    defaults: { _controller: IndicateurBundle:Type:liste }
+
+type_indicateur_ajouter:
+    path:     /type_indicateur/ajouter
+    defaults: { _controller: IndicateurBundle:Type:ajouter }
+    options:
+        expose: true
+
+type_indicateur_modifier:
+    path:     /type_indicateur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Type:modifier }
+    options:
+        expose: true
+
+type_indicateur_supprimer:
+    path:     /type_indicateur/supprimer
+    defaults: { _controller: IndicateurBundle:Type:suppr }
+    options:
+        expose: true
+
+
+#unite_indicateur
+unite_indicateur_liste:
+    path:     /unite_indicateur
+    defaults: { _controller: IndicateurBundle:Unite:liste }
+
+unite_indicateur_ajouter:
+    path:     /unite_indicateur/ajouter
+    defaults: { _controller: IndicateurBundle:Unite:ajouter }
+    options:
+        expose: true
+
+unite_indicateur_modifier:
+    path:     /unite_indicateur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Unite:modifier }
+    options:
+        expose: true
+
+unite_indicateur_supprimer:
+    path:     /unite_indicateur/supprimer
+    defaults: { _controller: IndicateurBundle:Unite:suppr }
+    options:
+        expose: true
+

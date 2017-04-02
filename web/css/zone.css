@@ -1,0 +1,29 @@
+.liste{
+    list-style: none;
+    font-size: 12pt;
+    padding-left: 0px;
+}
+.liste > li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.liste > li:hover{
+    background-color: #0D3349;
+    color: white;
+}
+
+.selection-obligatoire{
+    display: inline-block;
+}
+
+.btn-danger-inverted{
+    color: #d9534f;
+    background-color: transparent;
+    border-color: #73879C;
+}
+.btn-warning-inverted{
+    color: #f0ad4e;
+    background-color: transparent;
+    border-color: #73879C;
+}
