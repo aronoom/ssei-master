@@ -15,8 +15,8 @@ class __TwigTemplate_4d2cafb8d6869fbe6a6c6ce55f74638c6a8b24c731ee634b4d92c9af293
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d689f1ca9663c66686400798c15ecda934200998520511da0462949691992c56 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d689f1ca9663c66686400798c15ecda934200998520511da0462949691992c56->enter($__internal_d689f1ca9663c66686400798c15ecda934200998520511da0462949691992c56_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget.html.php"));
+        $__internal_d3ed8e94da1f1800f5d10a6d47782ff6bfd8c672cca81318d68ac18703fd8ad8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d3ed8e94da1f1800f5d10a6d47782ff6bfd8c672cca81318d68ac18703fd8ad8->enter($__internal_d3ed8e94da1f1800f5d10a6d47782ff6bfd8c672cca81318d68ac18703fd8ad8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget.html.php"));
 
         // line 1
         echo "<?php if (\$expanded): ?>
@@ -26,7 +26,7 @@ class __TwigTemplate_4d2cafb8d6869fbe6a6c6ce55f74638c6a8b24c731ee634b4d92c9af293
 <?php endif ?>
 ";
         
-        $__internal_d689f1ca9663c66686400798c15ecda934200998520511da0462949691992c56->leave($__internal_d689f1ca9663c66686400798c15ecda934200998520511da0462949691992c56_prof);
+        $__internal_d3ed8e94da1f1800f5d10a6d47782ff6bfd8c672cca81318d68ac18703fd8ad8->leave($__internal_d3ed8e94da1f1800f5d10a6d47782ff6bfd8c672cca81318d68ac18703fd8ad8_prof);
 
     }
 
@@ -55,6 +55,6 @@ class __TwigTemplate_4d2cafb8d6869fbe6a6c6ce55f74638c6a8b24c731ee634b4d92c9af293
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'choice_widget_collapsed') ?>
 <?php endif ?>
-", "@Framework/Form/choice_widget.html.php", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_widget.html.php");
+", "@Framework/Form/choice_widget.html.php", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_widget.html.php");
     }
 }

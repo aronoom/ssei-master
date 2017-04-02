@@ -15,8 +15,8 @@ class __TwigTemplate_6ecea1633268e75cd3f446dd1199cb723ca9bf366a705b754ae01005f81
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_79179f03ccc296deac27bfeec0a0ee8220ce0b44e6eda8d80b3d922acf3e20d0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_79179f03ccc296deac27bfeec0a0ee8220ce0b44e6eda8d80b3d922acf3e20d0->enter($__internal_79179f03ccc296deac27bfeec0a0ee8220ce0b44e6eda8d80b3d922acf3e20d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:list_content.html.twig"));
+        $__internal_bebd4915c45e153bd9ac10db413a38d908268e58c9fb12813aad8a6edbbb2ec0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bebd4915c45e153bd9ac10db413a38d908268e58c9fb12813aad8a6edbbb2ec0->enter($__internal_bebd4915c45e153bd9ac10db413a38d908268e58c9fb12813aad8a6edbbb2ec0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:list_content.html.twig"));
 
         // line 1
         echo "<div class=\"fos_user_group_list\">
@@ -42,7 +42,7 @@ class __TwigTemplate_6ecea1633268e75cd3f446dd1199cb723ca9bf366a705b754ae01005f81
 </div>
 ";
         
-        $__internal_79179f03ccc296deac27bfeec0a0ee8220ce0b44e6eda8d80b3d922acf3e20d0->leave($__internal_79179f03ccc296deac27bfeec0a0ee8220ce0b44e6eda8d80b3d922acf3e20d0_prof);
+        $__internal_bebd4915c45e153bd9ac10db413a38d908268e58c9fb12813aad8a6edbbb2ec0->leave($__internal_bebd4915c45e153bd9ac10db413a38d908268e58c9fb12813aad8a6edbbb2ec0_prof);
 
     }
 
@@ -78,6 +78,6 @@ class __TwigTemplate_6ecea1633268e75cd3f446dd1199cb723ca9bf366a705b754ae01005f81
     {% endfor %}
     </ul>
 </div>
-", "FOSUserBundle:Group:list_content.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Group/list_content.html.twig");
+", "FOSUserBundle:Group:list_content.html.twig", "/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Group/list_content.html.twig");
     }
 }

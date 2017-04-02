@@ -15,8 +15,8 @@ class __TwigTemplate_fcabacac6f527db5369255960c90fe69eda319bca637e99f4995068ecf6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7a6e15e0559608bfa3814a0e88d35668b4e4b1ece4dea510b70aa8571811e289 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7a6e15e0559608bfa3814a0e88d35668b4e4b1ece4dea510b70aa8571811e289->enter($__internal_7a6e15e0559608bfa3814a0e88d35668b4e4b1ece4dea510b70aa8571811e289_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.js.twig"));
+        $__internal_86cb4589d3938e369993ab04739d9cfb4a6fcf91508a7c63bb85248397d37505 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_86cb4589d3938e369993ab04739d9cfb4a6fcf91508a7c63bb85248397d37505->enter($__internal_86cb4589d3938e369993ab04739d9cfb4a6fcf91508a7c63bb85248397d37505_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.js.twig"));
 
         // line 1
         echo "/*
@@ -27,7 +27,7 @@ class __TwigTemplate_fcabacac6f527db5369255960c90fe69eda319bca637e99f4995068ecf6
         echo "*/
 ";
         
-        $__internal_7a6e15e0559608bfa3814a0e88d35668b4e4b1ece4dea510b70aa8571811e289->leave($__internal_7a6e15e0559608bfa3814a0e88d35668b4e4b1ece4dea510b70aa8571811e289_prof);
+        $__internal_86cb4589d3938e369993ab04739d9cfb4a6fcf91508a7c63bb85248397d37505->leave($__internal_86cb4589d3938e369993ab04739d9cfb4a6fcf91508a7c63bb85248397d37505_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_fcabacac6f527db5369255960c90fe69eda319bca637e99f4995068ecf6
         return new Twig_Source("/*
 {% include '@Twig/Exception/exception.txt.twig' with { 'exception': exception } %}
 */
-", "TwigBundle:Exception:exception.js.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.js.twig");
+", "TwigBundle:Exception:exception.js.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.js.twig");
     }
 }

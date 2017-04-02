@@ -15,8 +15,8 @@ class __TwigTemplate_ac453675e82c00e8c8f417e371b3881ab724d408f50f71837901272351f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9ccada52eeb0fba95270f64fffd244c8d9fd9396e0771891d932073cb1bc3a9e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9ccada52eeb0fba95270f64fffd244c8d9fd9396e0771891d932073cb1bc3a9e->enter($__internal_9ccada52eeb0fba95270f64fffd244c8d9fd9396e0771891d932073cb1bc3a9e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+        $__internal_abb74a24472bb1c4c67e0d3d784017179656f2832f5d1159a04ef1b2aaaefcae = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_abb74a24472bb1c4c67e0d3d784017179656f2832f5d1159a04ef1b2aaaefcae->enter($__internal_abb74a24472bb1c4c67e0d3d784017179656f2832f5d1159a04ef1b2aaaefcae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -28,7 +28,7 @@ class __TwigTemplate_ac453675e82c00e8c8f417e371b3881ab724d408f50f71837901272351f
 </svg>
 ";
         
-        $__internal_9ccada52eeb0fba95270f64fffd244c8d9fd9396e0771891d932073cb1bc3a9e->leave($__internal_9ccada52eeb0fba95270f64fffd244c8d9fd9396e0771891d932073cb1bc3a9e_prof);
+        $__internal_abb74a24472bb1c4c67e0d3d784017179656f2832f5d1159a04ef1b2aaaefcae->leave($__internal_abb74a24472bb1c4c67e0d3d784017179656f2832f5d1159a04ef1b2aaaefcae_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_ac453675e82c00e8c8f417e371b3881ab724d408f50f71837901272351f
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
-", "@WebProfiler/Icon/logger.svg", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/logger.svg");
+", "@WebProfiler/Icon/logger.svg", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/logger.svg");
     }
 }

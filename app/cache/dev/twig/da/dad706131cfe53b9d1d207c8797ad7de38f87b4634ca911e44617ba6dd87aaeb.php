@@ -15,8 +15,8 @@ class __TwigTemplate_e0bfea001b3a2b4ac16b27dba0f660c82d6d23abdc70c2a899020d09bb3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_75cc3b45b54baffd1af68b816d1aaf95ddb60547b79f8ebc6c994b88685743c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_75cc3b45b54baffd1af68b816d1aaf95ddb60547b79f8ebc6c994b88685743c0->enter($__internal_75cc3b45b54baffd1af68b816d1aaf95ddb60547b79f8ebc6c994b88685743c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.css.twig"));
+        $__internal_3b07c03e95537c874a1a81d59447b5f34ec25e09799bd8b6a6488c9fd27499d7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3b07c03e95537c874a1a81d59447b5f34ec25e09799bd8b6a6488c9fd27499d7->enter($__internal_3b07c03e95537c874a1a81d59447b5f34ec25e09799bd8b6a6488c9fd27499d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.css.twig"));
 
         // line 2
         $context["colors"] = array("success" => "#4F805D", "warning" => "#A46A1F", "error" => "#B0413E");
@@ -539,7 +539,7 @@ class __TwigTemplate_e0bfea001b3a2b4ac16b27dba0f660c82d6d23abdc70c2a899020d09bb3
 }
 ";
         
-        $__internal_75cc3b45b54baffd1af68b816d1aaf95ddb60547b79f8ebc6c994b88685743c0->leave($__internal_75cc3b45b54baffd1af68b816d1aaf95ddb60547b79f8ebc6c994b88685743c0_prof);
+        $__internal_3b07c03e95537c874a1a81d59447b5f34ec25e09799bd8b6a6488c9fd27499d7->leave($__internal_3b07c03e95537c874a1a81d59447b5f34ec25e09799bd8b6a6488c9fd27499d7_prof);
 
     }
 
@@ -1058,6 +1058,6 @@ class __TwigTemplate_e0bfea001b3a2b4ac16b27dba0f660c82d6d23abdc70c2a899020d09bb3
         display: none;
     }
 }
-", "WebProfilerBundle:Profiler:toolbar.css.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
+", "WebProfilerBundle:Profiler:toolbar.css.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_36b1928bf3231be7100c68f933d379fdb747ba80d8a3a1b5aadf6df2ad3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e0ab98b3f7a5ea89385c188832fd86f10cd2ce6d2f19e365d95b12bae5b7c784 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e0ab98b3f7a5ea89385c188832fd86f10cd2ce6d2f19e365d95b12bae5b7c784->enter($__internal_e0ab98b3f7a5ea89385c188832fd86f10cd2ce6d2f19e365d95b12bae5b7c784_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar_item.html.twig"));
+        $__internal_ab959bc18eb4c35de9d3da1199d734c9b1ae328e86f4bade4a95a9693a37e0cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ab959bc18eb4c35de9d3da1199d734c9b1ae328e86f4bade4a95a9693a37e0cc->enter($__internal_ab959bc18eb4c35de9d3da1199d734c9b1ae328e86f4bade4a95a9693a37e0cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar_item.html.twig"));
 
         // line 1
         echo "<div class=\"sf-toolbar-block sf-toolbar-block-";
@@ -49,7 +49,7 @@ class __TwigTemplate_36b1928bf3231be7100c68f933d379fdb747ba80d8a3a1b5aadf6df2ad3
 </div>
 ";
         
-        $__internal_e0ab98b3f7a5ea89385c188832fd86f10cd2ce6d2f19e365d95b12bae5b7c784->leave($__internal_e0ab98b3f7a5ea89385c188832fd86f10cd2ce6d2f19e365d95b12bae5b7c784_prof);
+        $__internal_ab959bc18eb4c35de9d3da1199d734c9b1ae328e86f4bade4a95a9693a37e0cc->leave($__internal_ab959bc18eb4c35de9d3da1199d734c9b1ae328e86f4bade4a95a9693a37e0cc_prof);
 
     }
 
@@ -84,6 +84,6 @@ class __TwigTemplate_36b1928bf3231be7100c68f933d379fdb747ba80d8a3a1b5aadf6df2ad3
     {% if link is not defined or link %}</a>{% endif %}
         <div class=\"sf-toolbar-info\">{{ text|default('') }}</div>
 </div>
-", "WebProfilerBundle:Profiler:toolbar_item.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_item.html.twig");
+", "WebProfilerBundle:Profiler:toolbar_item.html.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_item.html.twig");
     }
 }

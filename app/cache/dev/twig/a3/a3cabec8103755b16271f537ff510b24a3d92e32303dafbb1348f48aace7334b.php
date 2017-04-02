@@ -15,8 +15,8 @@ class __TwigTemplate_032852dcda8c6696b0b159f79f0589536ae6cf782027c9f676aa40d4c86
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e56275da29acfd80e2b6950a70872964cb4f1a430ada15314e54305f2f8db434 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e56275da29acfd80e2b6950a70872964cb4f1a430ada15314e54305f2f8db434->enter($__internal_e56275da29acfd80e2b6950a70872964cb4f1a430ada15314e54305f2f8db434_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.txt.twig"));
+        $__internal_8db04b278a521b5e8de6fcf87a3db87cf3c01aa19201b5abb6505496abca1b28 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8db04b278a521b5e8de6fcf87a3db87cf3c01aa19201b5abb6505496abca1b28->enter($__internal_8db04b278a521b5e8de6fcf87a3db87cf3c01aa19201b5abb6505496abca1b28_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.txt.twig"));
 
         // line 1
         echo "[exception] ";
@@ -50,7 +50,7 @@ class __TwigTemplate_032852dcda8c6696b0b159f79f0589536ae6cf782027c9f676aa40d4c86
         unset($context['_seq'], $context['_iterated'], $context['i'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_e56275da29acfd80e2b6950a70872964cb4f1a430ada15314e54305f2f8db434->leave($__internal_e56275da29acfd80e2b6950a70872964cb4f1a430ada15314e54305f2f8db434_prof);
+        $__internal_8db04b278a521b5e8de6fcf87a3db87cf3c01aa19201b5abb6505496abca1b28->leave($__internal_8db04b278a521b5e8de6fcf87a3db87cf3c01aa19201b5abb6505496abca1b28_prof);
 
     }
 
@@ -86,6 +86,6 @@ class __TwigTemplate_032852dcda8c6696b0b159f79f0589536ae6cf782027c9f676aa40d4c86
 {% include '@Twig/Exception/traces.txt.twig' with { 'exception': e } only %}
 
 {% endfor %}
-", "TwigBundle:Exception:exception.txt.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.txt.twig");
+", "TwigBundle:Exception:exception.txt.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.txt.twig");
     }
 }

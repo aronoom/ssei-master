@@ -15,8 +15,8 @@ class __TwigTemplate_2c73f3f6e7748bbf3a987d17eb8a159bb1f99b184391ece8aedd002ddd7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ae2220e6be0e315c7082ea6bb16ab10a68f23263d81b4b4c8b72319b75ed6ac0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ae2220e6be0e315c7082ea6bb16ab10a68f23263d81b4b4c8b72319b75ed6ac0->enter($__internal_ae2220e6be0e315c7082ea6bb16ab10a68f23263d81b4b4c8b72319b75ed6ac0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
+        $__internal_7fa6a40d42e1251a8024e36256dd8597521a69656ee32fe0a13ea1a5fa0b73d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7fa6a40d42e1251a8024e36256dd8597521a69656ee32fe0a13ea1a5fa0b73d4->enter($__internal_7fa6a40d42e1251a8024e36256dd8597521a69656ee32fe0a13ea1a5fa0b73d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
 
         // line 1
         echo "<form action=\"";
@@ -37,7 +37,7 @@ class __TwigTemplate_2c73f3f6e7748bbf3a987d17eb8a159bb1f99b184391ece8aedd002ddd7
 </form>
 ";
         
-        $__internal_ae2220e6be0e315c7082ea6bb16ab10a68f23263d81b4b4c8b72319b75ed6ac0->leave($__internal_ae2220e6be0e315c7082ea6bb16ab10a68f23263d81b4b4c8b72319b75ed6ac0_prof);
+        $__internal_7fa6a40d42e1251a8024e36256dd8597521a69656ee32fe0a13ea1a5fa0b73d4->leave($__internal_7fa6a40d42e1251a8024e36256dd8597521a69656ee32fe0a13ea1a5fa0b73d4_prof);
 
     }
 
@@ -72,6 +72,6 @@ class __TwigTemplate_2c73f3f6e7748bbf3a987d17eb8a159bb1f99b184391ece8aedd002ddd7
         <input type=\"submit\" value=\"{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}\" />
     </div>
 </form>
-", "FOSUserBundle:Registration:register_content.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register_content.html.twig");
+", "FOSUserBundle:Registration:register_content.html.twig", "/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register_content.html.twig");
     }
 }

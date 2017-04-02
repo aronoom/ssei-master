@@ -15,14 +15,14 @@ class __TwigTemplate_9acde862814485e8ba636c5193378949f9ae1922476da67b8646286e8b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5d6796f722e6a589cd6d20a0f3dbea90103d2ad55057328103f9f133f59582a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5d6796f722e6a589cd6d20a0f3dbea90103d2ad55057328103f9f133f59582a2->enter($__internal_5d6796f722e6a589cd6d20a0f3dbea90103d2ad55057328103f9f133f59582a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
+        $__internal_9fdc52cda72300af6c5245ef7e6df51bbc48dfec2a05ed081af8a9f786109e5f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9fdc52cda72300af6c5245ef7e6df51bbc48dfec2a05ed081af8a9f786109e5f->enter($__internal_9fdc52cda72300af6c5245ef7e6df51bbc48dfec2a05ed081af8a9f786109e5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
 ";
         
-        $__internal_5d6796f722e6a589cd6d20a0f3dbea90103d2ad55057328103f9f133f59582a2->leave($__internal_5d6796f722e6a589cd6d20a0f3dbea90103d2ad55057328103f9f133f59582a2_prof);
+        $__internal_9fdc52cda72300af6c5245ef7e6df51bbc48dfec2a05ed081af8a9f786109e5f->leave($__internal_9fdc52cda72300af6c5245ef7e6df51bbc48dfec2a05ed081af8a9f786109e5f_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_9acde862814485e8ba636c5193378949f9ae1922476da67b8646286e8b6
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
-", "@Framework/Form/search_widget.html.php", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
+", "@Framework/Form/search_widget.html.php", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
     }
 }

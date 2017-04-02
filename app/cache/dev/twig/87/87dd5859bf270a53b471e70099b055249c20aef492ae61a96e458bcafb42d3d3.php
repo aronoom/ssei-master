@@ -15,8 +15,8 @@ class __TwigTemplate_068e0afb37178b2b8faf69ee497ead07eb400450c71520b253bd829bbb5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d6c617d18c6ceab615f948f980a9a5326faef91c428dd7d69b98d696c3f9981b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d6c617d18c6ceab615f948f980a9a5326faef91c428dd7d69b98d696c3f9981b->enter($__internal_d6c617d18c6ceab615f948f980a9a5326faef91c428dd7d69b98d696c3f9981b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.html.twig"));
+        $__internal_4f6a3953af76a922e66b22802f2bf63537225f7953524e466c4e14134eb62d94 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4f6a3953af76a922e66b22802f2bf63537225f7953524e466c4e14134eb62d94->enter($__internal_4f6a3953af76a922e66b22802f2bf63537225f7953524e466c4e14134eb62d94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.html.twig"));
 
         // line 1
         echo "<div class=\"block-exception\">
@@ -233,7 +233,7 @@ class __TwigTemplate_068e0afb37178b2b8faf69ee497ead07eb400450c71520b253bd829bbb5
 //]]></script>
 ";
         
-        $__internal_d6c617d18c6ceab615f948f980a9a5326faef91c428dd7d69b98d696c3f9981b->leave($__internal_d6c617d18c6ceab615f948f980a9a5326faef91c428dd7d69b98d696c3f9981b_prof);
+        $__internal_4f6a3953af76a922e66b22802f2bf63537225f7953524e466c4e14134eb62d94->leave($__internal_4f6a3953af76a922e66b22802f2bf63537225f7953524e466c4e14134eb62d94_prof);
 
     }
 
@@ -383,6 +383,6 @@ class __TwigTemplate_068e0afb37178b2b8faf69ee497ead07eb400450c71520b253bd829bbb5
         icon2.style.display = display1;
     }
 //]]></script>
-", "TwigBundle:Exception:exception.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
+", "TwigBundle:Exception:exception.html.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
     }
 }

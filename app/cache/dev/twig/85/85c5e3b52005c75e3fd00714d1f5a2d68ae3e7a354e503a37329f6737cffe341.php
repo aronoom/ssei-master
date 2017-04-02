@@ -15,8 +15,8 @@ class __TwigTemplate_45b1f1cad50f68b038d3d6cf12ced1e9826489fb4ea81a468a866dabf6a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e6b7a288cdeb22ea1fc7a00185bc43fb2519c426d186fd49a08101efcc8ee5ff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e6b7a288cdeb22ea1fc7a00185bc43fb2519c426d186fd49a08101efcc8ee5ff->enter($__internal_e6b7a288cdeb22ea1fc7a00185bc43fb2519c426d186fd49a08101efcc8ee5ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
+        $__internal_a2a86768dce7688496487443411302fd35938c3bad51c4782f7cbef9f6017068 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a2a86768dce7688496487443411302fd35938c3bad51c4782f7cbef9f6017068->enter($__internal_a2a86768dce7688496487443411302fd35938c3bad51c4782f7cbef9f6017068_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
 
         // line 1
         echo "Oops! An Error Occurred
@@ -33,7 +33,7 @@ Something is broken. Please let us know what you were doing when this error occu
 We will fix it as soon as possible. Sorry for any inconvenience caused.
 ";
         
-        $__internal_e6b7a288cdeb22ea1fc7a00185bc43fb2519c426d186fd49a08101efcc8ee5ff->leave($__internal_e6b7a288cdeb22ea1fc7a00185bc43fb2519c426d186fd49a08101efcc8ee5ff_prof);
+        $__internal_a2a86768dce7688496487443411302fd35938c3bad51c4782f7cbef9f6017068->leave($__internal_a2a86768dce7688496487443411302fd35938c3bad51c4782f7cbef9f6017068_prof);
 
     }
 
@@ -69,6 +69,6 @@ The server returned a \"{{ status_code }} {{ status_text }}\".
 
 Something is broken. Please let us know what you were doing when this error occurred.
 We will fix it as soon as possible. Sorry for any inconvenience caused.
-", "TwigBundle:Exception:error.txt.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
+", "TwigBundle:Exception:error.txt.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
     }
 }

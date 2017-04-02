@@ -15,8 +15,8 @@ class __TwigTemplate_0eb0b8ea28492c1e421f4f2b7c09087cc16be67049dea8937aeae77a9a5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_96133619e546f769c1c82e522579ea52b1c99d1ab6ae303828eccb0228ed3553 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_96133619e546f769c1c82e522579ea52b1c99d1ab6ae303828eccb0228ed3553->enter($__internal_96133619e546f769c1c82e522579ea52b1c99d1ab6ae303828eccb0228ed3553_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_collapsed.html.php"));
+        $__internal_fb256f601f4ad4209312dae231eb125bff0745725e573952be444ab40a2ffc5d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fb256f601f4ad4209312dae231eb125bff0745725e573952be444ab40a2ffc5d->enter($__internal_fb256f601f4ad4209312dae231eb125bff0745725e573952be444ab40a2ffc5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_collapsed.html.php"));
 
         // line 1
         echo "<select
@@ -39,7 +39,7 @@ class __TwigTemplate_0eb0b8ea28492c1e421f4f2b7c09087cc16be67049dea8937aeae77a9a5
 </select>
 ";
         
-        $__internal_96133619e546f769c1c82e522579ea52b1c99d1ab6ae303828eccb0228ed3553->leave($__internal_96133619e546f769c1c82e522579ea52b1c99d1ab6ae303828eccb0228ed3553_prof);
+        $__internal_fb256f601f4ad4209312dae231eb125bff0745725e573952be444ab40a2ffc5d->leave($__internal_fb256f601f4ad4209312dae231eb125bff0745725e573952be444ab40a2ffc5d_prof);
 
     }
 
@@ -81,6 +81,6 @@ class __TwigTemplate_0eb0b8ea28492c1e421f4f2b7c09087cc16be67049dea8937aeae77a9a5
     <?php endif ?>
     <?php echo \$view['form']->block(\$form, 'choice_widget_options', array('choices' => \$choices)) ?>
 </select>
-", "@Framework/Form/choice_widget_collapsed.html.php", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_widget_collapsed.html.php");
+", "@Framework/Form/choice_widget_collapsed.html.php", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_widget_collapsed.html.php");
     }
 }

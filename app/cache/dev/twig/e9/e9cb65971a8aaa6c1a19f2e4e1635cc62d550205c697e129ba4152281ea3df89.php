@@ -15,8 +15,8 @@ class __TwigTemplate_b716ba604a20af024acfd725f9ed77784166abaf90e99738a2ef58215f1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8bce498bbde8b0cab5def5cbca37e660f3d845ef2e27abbcfddbcaeb54cd389 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c8bce498bbde8b0cab5def5cbca37e660f3d845ef2e27abbcfddbcaeb54cd389->enter($__internal_c8bce498bbde8b0cab5def5cbca37e660f3d845ef2e27abbcfddbcaeb54cd389_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
+        $__internal_4f9c0aab6a869cc409732e4a1dfb5d8d68229398e390179976950d34af49d02c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4f9c0aab6a869cc409732e4a1dfb5d8d68229398e390179976950d34af49d02c->enter($__internal_4f9c0aab6a869cc409732e4a1dfb5d8d68229398e390179976950d34af49d02c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
 
         // line 1
         echo "<div id=\"sidebar-search\">
@@ -118,7 +118,7 @@ class __TwigTemplate_b716ba604a20af024acfd725f9ed77784166abaf90e99738a2ef58215f1
 </div>
 ";
         
-        $__internal_c8bce498bbde8b0cab5def5cbca37e660f3d845ef2e27abbcfddbcaeb54cd389->leave($__internal_c8bce498bbde8b0cab5def5cbca37e660f3d845ef2e27abbcfddbcaeb54cd389_prof);
+        $__internal_4f9c0aab6a869cc409732e4a1dfb5d8d68229398e390179976950d34af49d02c->leave($__internal_4f9c0aab6a869cc409732e4a1dfb5d8d68229398e390179976950d34af49d02c_prof);
 
     }
 
@@ -198,6 +198,6 @@ class __TwigTemplate_b716ba604a20af024acfd725f9ed77784166abaf90e99738a2ef58215f1
         </div>
     </form>
 </div>
-", "WebProfilerBundle:Profiler:search.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/search.html.twig");
+", "WebProfilerBundle:Profiler:search.html.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/search.html.twig");
     }
 }

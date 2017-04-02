@@ -15,8 +15,8 @@ class __TwigTemplate_cb674364790c0855ec9d50b1db6f62e54a5085a17342d6e235f04a11182
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_574512d091641e02cf87c7b03d351fad94f913ea549c42773e91a64bec73c057 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_574512d091641e02cf87c7b03d351fad94f913ea549c42773e91a64bec73c057->enter($__internal_574512d091641e02cf87c7b03d351fad94f913ea549c42773e91a64bec73c057_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
+        $__internal_5e33232e9ba222b9e27242cc6d8fd33f3bd7df4e1c58d1b622d6cebe961b332c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5e33232e9ba222b9e27242cc6d8fd33f3bd7df4e1c58d1b622d6cebe961b332c->enter($__internal_5e33232e9ba222b9e27242cc6d8fd33f3bd7df4e1c58d1b622d6cebe961b332c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
 
         // line 1
         echo "<h2>Routing</h2>
@@ -197,7 +197,7 @@ $context["trace"], "level", array()) == 2)) {
 </p>
 ";
         
-        $__internal_574512d091641e02cf87c7b03d351fad94f913ea549c42773e91a64bec73c057->leave($__internal_574512d091641e02cf87c7b03d351fad94f913ea549c42773e91a64bec73c057_prof);
+        $__internal_5e33232e9ba222b9e27242cc6d8fd33f3bd7df4e1c58d1b622d6cebe961b332c->leave($__internal_5e33232e9ba222b9e27242cc6d8fd33f3bd7df4e1c58d1b622d6cebe961b332c_prof);
 
     }
 
@@ -304,6 +304,6 @@ $context["trace"], "level", array()) == 2)) {
     Note: These matching logs are based on the current router configuration,
     which might differ from the configuration used when profiling this request.
 </p>
-", "WebProfilerBundle:Router:panel.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig");
+", "WebProfilerBundle:Router:panel.html.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig");
     }
 }

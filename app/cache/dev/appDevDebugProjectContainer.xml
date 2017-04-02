@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/opt/lampp/htdocs/ssei-master/app</parameter>
+    <parameter key="kernel.root_dir">/opt/lampp/htdocs/ssei/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">/opt/lampp/htdocs/ssei-master/app/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/opt/lampp/htdocs/ssei-master/app/logs</parameter>
+    <parameter key="kernel.cache_dir">/opt/lampp/htdocs/ssei/app/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/opt/lampp/htdocs/ssei/app/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -31,97 +31,97 @@
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/monolog-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="SwiftmailerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/swiftmailer-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/swiftmailer-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SwiftmailerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/sensio/framework-extra-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/src/AppBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/AppBundle</parameter>
         <parameter key="namespace">AppBundle</parameter>
       </parameter>
       <parameter key="FOSUserBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle</parameter>
         <parameter key="namespace">FOS\UserBundle</parameter>
       </parameter>
       <parameter key="FOSJsRoutingBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/jsrouting-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/jsrouting-bundle</parameter>
         <parameter key="namespace">FOS\JsRoutingBundle</parameter>
       </parameter>
       <parameter key="UserBundle" type="collection">
         <parameter key="parent">FOSUserBundle</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/Proc/UserBundle</parameter>
         <parameter key="namespace">Proc\UserBundle</parameter>
       </parameter>
       <parameter key="AretusaFlashBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/aretusa/flash-bundle/Aretusa/Bundle/FlashBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/aretusa/flash-bundle/Aretusa/Bundle/FlashBundle</parameter>
         <parameter key="namespace">Aretusa\Bundle\FlashBundle</parameter>
       </parameter>
       <parameter key="IndicateurBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle</parameter>
         <parameter key="namespace">Proc\IndicateurBundle</parameter>
       </parameter>
       <parameter key="ZoneBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/src/ZoneBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/ZoneBundle</parameter>
         <parameter key="namespace">ZoneBundle</parameter>
       </parameter>
       <parameter key="ProjetBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/src/ProjetBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/ProjetBundle</parameter>
         <parameter key="namespace">ProjetBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="SensioDistributionBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/sensio/distribution-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/sensio/distribution-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\DistributionBundle</parameter>
       </parameter>
       <parameter key="SensioGeneratorBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/ssei-master/vendor/sensio/generator-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/vendor/sensio/generator-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\GeneratorBundle</parameter>
       </parameter>
     </parameter>
@@ -206,7 +206,7 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/opt/lampp/htdocs/ssei-master/app/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/opt/lampp/htdocs/ssei/app/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="security.secure_random.class">Symfony\Component\Security\Core\Util\SecureRandom</parameter>
     <parameter key="form.resolved_type_factory.class">Symfony\Component\Form\ResolvedFormTypeFactory</parameter>
@@ -263,7 +263,7 @@
     <parameter key="data_collector.form.extractor.class">Symfony\Component\Form\Extension\DataCollector\FormDataExtractor</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/opt/lampp/htdocs/ssei-master/app/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/opt/lampp/htdocs/ssei/app/cache/dev/profiler</parameter>
     <parameter key="profiler.storage.username"></parameter>
     <parameter key="profiler.storage.password"></parameter>
     <parameter key="profiler.storage.lifetime">86400</parameter>
@@ -287,7 +287,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/opt/lampp/htdocs/ssei-master/app/config/routing_dev.yml</parameter>
+    <parameter key="router.resource">/opt/lampp/htdocs/ssei/app/config/routing_dev.yml</parameter>
     <parameter key="router.cache_class_prefix">appDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -298,7 +298,7 @@
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher</parameter>
-    <parameter key="debug.container.dump">/opt/lampp/htdocs/ssei-master/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">/opt/lampp/htdocs/ssei/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Component\HttpKernel\Controller\TraceableControllerResolver</parameter>
     <parameter key="security.context.class">Symfony\Component\Security\Core\SecurityContext</parameter>
     <parameter key="security.user_checker.class">Symfony\Component\Security\Core\User\UserChecker</parameter>
@@ -447,7 +447,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/opt/lampp/htdocs/ssei-master/app/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">/opt/lampp/htdocs/ssei/app/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -565,7 +565,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/opt/lampp/htdocs/ssei-master/app/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/opt/lampp/htdocs/ssei/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -747,7 +747,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/opt/lampp/htdocs/ssei-master/app/Resources</argument>
+                <argument>/opt/lampp/htdocs/ssei/app/Resources</argument>
               </service>
             </argument>
             <argument type="service" id="templating.locator"/>
@@ -774,7 +774,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/opt/lampp/htdocs/ssei-master/app/Resources</argument>
+                <argument>/opt/lampp/htdocs/ssei/app/Resources</argument>
               </service>
             </argument>
             <argument type="collection"/>
@@ -787,7 +787,7 @@
             <argument type="service">
               <service class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
                 <argument type="service" id="kernel"/>
-                <argument>/opt/lampp/htdocs/ssei-master/app</argument>
+                <argument>/opt/lampp/htdocs/ssei/app</argument>
                 <argument type="collection"/>
               </service>
             </argument>
@@ -818,7 +818,7 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/opt/lampp/htdocs/ssei-master/app/Resources</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/Resources</argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
       <argument>1895c3059a14573a23aa63b6d989a77dd3877cca</argument>
@@ -938,7 +938,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">/opt/lampp/htdocs/ssei-master/app/cache/dev/translations</argument>
+        <argument key="cache_dir">/opt/lampp/htdocs/ssei/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
       <argument type="collection"/>
@@ -1453,7 +1453,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/opt/lampp/htdocs/ssei-master/app/cache/dev</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/cache/dev</argument>
     </service>
     <service id="templating.helper.assets" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\AssetsHelper">
       <tag name="templating.helper" alias="assets"/>
@@ -1492,13 +1492,13 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
-          <argument>/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml</argument>
+          <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+          <argument>/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="addYamlMappings">
         <argument type="collection">
-          <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Resources/config/validation.yml</argument>
+          <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Resources/config/validation.yml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1519,7 +1519,7 @@
         </argument>
       </call>
       <call method="addXmlMapping">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/DependencyInjection/Compiler/../../Resources/config/storage-validation/orm.xml</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/DependencyInjection/Compiler/../../Resources/config/storage-validation/orm.xml</argument>
       </call>
       <factory class="Symfony\Component\Validator\Validation" method="createValidatorBuilder"/>
     </service>
@@ -1540,7 +1540,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:/opt/lampp/htdocs/ssei-master/app/cache/dev/profiler</argument>
+          <argument>file:/opt/lampp/htdocs/ssei/app/cache/dev/profiler</argument>
           <argument></argument>
           <argument></argument>
           <argument>86400</argument>
@@ -1956,7 +1956,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58e11926aa33c7.04224497</argument>
+            <argument>58e11d1d48bfe8.89359686</argument>
           </service>
         </argument>
       </argument>
@@ -2246,7 +2246,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58e11926aa33c7.04224497</argument>
+            <argument>58e11d1d48bfe8.89359686</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2360,7 +2360,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/opt/lampp/htdocs/ssei-master/app/cache/dev/twig</argument>
+        <argument key="cache">/opt/lampp/htdocs/ssei/app/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2435,7 +2435,7 @@
           <service class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
             <tag name="twig.extension"/>
             <argument>null</argument>
-            <argument>/opt/lampp/htdocs/ssei-master/app</argument>
+            <argument>/opt/lampp/htdocs/ssei/app</argument>
             <argument>UTF-8</argument>
           </service>
         </argument>
@@ -2592,7 +2592,7 @@
     <service id="monolog.handler.fingers_crossed.error_level_activation_strategy" class="Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy"/>
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/opt/lampp/htdocs/ssei-master/app/logs/dev.log</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -2704,17 +2704,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_c04ebd1f29f088f075a5b399386add5dab4e46b21b15ff1f1119ed28519974ac</argument>
+        <argument>sf2orm_default_b2c5c9a2f62ea915f344989ffbe87ace07fd99cdd1fc4e48694e555069fc9ec1</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_c04ebd1f29f088f075a5b399386add5dab4e46b21b15ff1f1119ed28519974ac</argument>
+        <argument>sf2orm_default_b2c5c9a2f62ea915f344989ffbe87ace07fd99cdd1fc4e48694e555069fc9ec1</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_c04ebd1f29f088f075a5b399386add5dab4e46b21b15ff1f1119ed28519974ac</argument>
+        <argument>sf2orm_default_b2c5c9a2f62ea915f344989ffbe87ace07fd99cdd1fc4e48694e555069fc9ec1</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\ORM\Mapping\DefaultEntityListenerResolver"/>
@@ -2751,7 +2751,7 @@
                   <argument type="service">
                     <service class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
                       <argument type="collection">
-                        <argument key="/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
+                        <argument key="/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2765,10 +2765,10 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ZoneBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2779,10 +2779,10 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ZoneBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2793,10 +2793,10 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ZoneBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2807,10 +2807,10 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ZoneBundle/Entity</argument>
-                        <argument>/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2820,7 +2820,7 @@
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>/opt/lampp/htdocs/ssei-master/app/cache/dev/doctrine/orm/Proxies</argument>
+            <argument>/opt/lampp/htdocs/ssei/app/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -3000,7 +3000,7 @@
     <service id="fos_js_routing.extractor" class="FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractor">
       <argument type="service" id="router"/>
       <argument type="collection"/>
-      <argument>/opt/lampp/htdocs/ssei-master/app/cache/dev</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/cache/dev</argument>
       <argument type="collection">
         <argument key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</argument>
         <argument key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</argument>
@@ -3269,7 +3269,7 @@
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>/opt/lampp/htdocs/ssei-master/app/cache/dev/sessions</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -3284,9 +3284,9 @@
     <service id="router" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
       <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
-      <argument>/opt/lampp/htdocs/ssei-master/app/config/routing_dev.yml</argument>
+      <argument>/opt/lampp/htdocs/ssei/app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/opt/lampp/htdocs/ssei-master/app/cache/dev</argument>
+        <argument key="cache_dir">/opt/lampp/htdocs/ssei/app/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -3310,7 +3310,7 @@
       </argument>
       <argument type="service">
         <service class="Doctrine\Common\Cache\FilesystemCache" public="false">
-          <argument>/opt/lampp/htdocs/ssei-master/app/cache/dev/annotations</argument>
+          <argument>/opt/lampp/htdocs/ssei/app/cache/dev/annotations</argument>
         </service>
       </argument>
       <argument>true</argument>
@@ -3464,70 +3464,70 @@
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/app/Resources/FOSUserBundle/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/app/Resources/FOSUserBundle/views</argument>
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/UserBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Resources/views</argument>
         <argument>User</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/aretusa/flash-bundle/Aretusa/Bundle/FlashBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/aretusa/flash-bundle/Aretusa/Bundle/FlashBundle/Resources/views</argument>
         <argument>AretusaFlash</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/src/Proc/IndicateurBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views</argument>
         <argument>Indicateur</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/src/ZoneBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Resources/views</argument>
         <argument>Zone</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views</argument>
         <argument>Projet</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/app/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/ssei/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="session.storage" alias="session.storage.native"/>

@@ -15,13 +15,13 @@ class __TwigTemplate_0e26a3acbb72d80d27d487463eb0318e49472e88c46857572cd24c1391c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3a8d0f37823774bce620dd29cdeadf9bba69ffb64ca536625a7f3bc211612d7d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3a8d0f37823774bce620dd29cdeadf9bba69ffb64ca536625a7f3bc211612d7d->enter($__internal_3a8d0f37823774bce620dd29cdeadf9bba69ffb64ca536625a7f3bc211612d7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
+        $__internal_0947001dd4a149f46af383bc4fa52c469c7580d84ff245b7db677d50640c820f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0947001dd4a149f46af383bc4fa52c469c7580d84ff245b7db677d50640c820f->enter($__internal_0947001dd4a149f46af383bc4fa52c469c7580d84ff245b7db677d50640c820f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/error.xml.twig", "TwigBundle:Exception:error.atom.twig", 1)->display($context);
         
-        $__internal_3a8d0f37823774bce620dd29cdeadf9bba69ffb64ca536625a7f3bc211612d7d->leave($__internal_3a8d0f37823774bce620dd29cdeadf9bba69ffb64ca536625a7f3bc211612d7d_prof);
+        $__internal_0947001dd4a149f46af383bc4fa52c469c7580d84ff245b7db677d50640c820f->leave($__internal_0947001dd4a149f46af383bc4fa52c469c7580d84ff245b7db677d50640c820f_prof);
 
     }
 
@@ -46,6 +46,6 @@ class __TwigTemplate_0e26a3acbb72d80d27d487463eb0318e49472e88c46857572cd24c1391c
     public function getSourceContext()
     {
         return new Twig_Source("{% include '@Twig/Exception/error.xml.twig' %}
-", "TwigBundle:Exception:error.atom.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
+", "TwigBundle:Exception:error.atom.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_afe51c96e255ea37c5b64fb1f11de1af09a0e246153adf95c08be5ca3a0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_78dfeb50ba405016a984fe2e55a73627fe6fa930c512a1fca3a6be9c0a21ed9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_78dfeb50ba405016a984fe2e55a73627fe6fa930c512a1fca3a6be9c0a21ed9a->enter($__internal_78dfeb50ba405016a984fe2e55a73627fe6fa930c512a1fca3a6be9c0a21ed9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:table.html.twig"));
+        $__internal_f35c5a0b77a53f959747022477ff313cd1a2b87f6fb8b8531cf81a5b2c6809c1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f35c5a0b77a53f959747022477ff313cd1a2b87f6fb8b8531cf81a5b2c6809c1->enter($__internal_f35c5a0b77a53f959747022477ff313cd1a2b87f6fb8b8531cf81a5b2c6809c1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:table.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -61,7 +61,7 @@ class __TwigTemplate_afe51c96e255ea37c5b64fb1f11de1af09a0e246153adf95c08be5ca3a0
 </table>
 ";
         
-        $__internal_78dfeb50ba405016a984fe2e55a73627fe6fa930c512a1fca3a6be9c0a21ed9a->leave($__internal_78dfeb50ba405016a984fe2e55a73627fe6fa930c512a1fca3a6be9c0a21ed9a_prof);
+        $__internal_f35c5a0b77a53f959747022477ff313cd1a2b87f6fb8b8531cf81a5b2c6809c1->leave($__internal_f35c5a0b77a53f959747022477ff313cd1a2b87f6fb8b8531cf81a5b2c6809c1_prof);
 
     }
 
@@ -106,6 +106,6 @@ class __TwigTemplate_afe51c96e255ea37c5b64fb1f11de1af09a0e246153adf95c08be5ca3a0
         {% endfor %}
     </tbody>
 </table>
-", "WebProfilerBundle:Profiler:table.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/table.html.twig");
+", "WebProfilerBundle:Profiler:table.html.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/table.html.twig");
     }
 }

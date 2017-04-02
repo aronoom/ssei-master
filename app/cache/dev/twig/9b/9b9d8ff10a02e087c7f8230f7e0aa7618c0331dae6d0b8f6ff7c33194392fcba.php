@@ -15,13 +15,13 @@ class __TwigTemplate_456d7df099f355184c170cc463396f1ba1103264497e566ae50204287c6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a0c27af38e6a79cd5daed97ed3d0429f5db12c743137eec022a1d20970488c46 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a0c27af38e6a79cd5daed97ed3d0429f5db12c743137eec022a1d20970488c46->enter($__internal_a0c27af38e6a79cd5daed97ed3d0429f5db12c743137eec022a1d20970488c46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Default:index.html.twig"));
+        $__internal_2eb2f6202d0a43093bae2a9c1ace57fb1f9992bfccfef223964edbe7cf6cd547 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2eb2f6202d0a43093bae2a9c1ace57fb1f9992bfccfef223964edbe7cf6cd547->enter($__internal_2eb2f6202d0a43093bae2a9c1ace57fb1f9992bfccfef223964edbe7cf6cd547_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Default:index.html.twig"));
 
         // line 1
         echo "Here is the default project template";
         
-        $__internal_a0c27af38e6a79cd5daed97ed3d0429f5db12c743137eec022a1d20970488c46->leave($__internal_a0c27af38e6a79cd5daed97ed3d0429f5db12c743137eec022a1d20970488c46_prof);
+        $__internal_2eb2f6202d0a43093bae2a9c1ace57fb1f9992bfccfef223964edbe7cf6cd547->leave($__internal_2eb2f6202d0a43093bae2a9c1ace57fb1f9992bfccfef223964edbe7cf6cd547_prof);
 
     }
 
@@ -45,6 +45,6 @@ class __TwigTemplate_456d7df099f355184c170cc463396f1ba1103264497e566ae50204287c6
 
     public function getSourceContext()
     {
-        return new Twig_Source("Here is the default project template", "ProjetBundle:Default:index.html.twig", "/opt/lampp/htdocs/ssei-master/src/ProjetBundle/Resources/views/Default/index.html.twig");
+        return new Twig_Source("Here is the default project template", "ProjetBundle:Default:index.html.twig", "/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/Default/index.html.twig");
     }
 }

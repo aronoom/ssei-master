@@ -77,7 +77,7 @@ class Descriptif_par_ui
     private $activite;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ProjetBundle\Entity\Descriptif_projet", inversedBy="$descriptif_par_uis",cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="ProjetBundle\Entity\Descriptif_projet", inversedBy="$descriptif_par_uis",cascade={"persist","remove"})
      *
      */
     private $descriptif_projet;

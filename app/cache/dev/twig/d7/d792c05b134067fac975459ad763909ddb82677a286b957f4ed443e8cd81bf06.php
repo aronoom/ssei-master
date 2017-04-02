@@ -15,8 +15,8 @@ class __TwigTemplate_998b5511d0394c5336d09a692a456b45e5df1c8f346a6d75eb8d6a1b62f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_af2d706281e34e7188730700c7ac6863d2127ebd58dee6667a58582fc5e6040b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_af2d706281e34e7188730700c7ac6863d2127ebd58dee6667a58582fc5e6040b->enter($__internal_af2d706281e34e7188730700c7ac6863d2127ebd58dee6667a58582fc5e6040b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:trace.txt.twig"));
+        $__internal_a9eeeaece25ec580d71cbd77eb7a3278362c028a3cc893cfe93301e975e0ef05 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a9eeeaece25ec580d71cbd77eb7a3278362c028a3cc893cfe93301e975e0ef05->enter($__internal_a9eeeaece25ec580d71cbd77eb7a3278362c028a3cc893cfe93301e975e0ef05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:trace.txt.twig"));
 
         // line 1
         if ($this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "function", array())) {
@@ -43,7 +43,7 @@ class __TwigTemplate_998b5511d0394c5336d09a692a456b45e5df1c8f346a6d75eb8d6a1b62f
 ";
         }
         
-        $__internal_af2d706281e34e7188730700c7ac6863d2127ebd58dee6667a58582fc5e6040b->leave($__internal_af2d706281e34e7188730700c7ac6863d2127ebd58dee6667a58582fc5e6040b_prof);
+        $__internal_a9eeeaece25ec580d71cbd77eb7a3278362c028a3cc893cfe93301e975e0ef05->leave($__internal_a9eeeaece25ec580d71cbd77eb7a3278362c028a3cc893cfe93301e975e0ef05_prof);
 
     }
 
@@ -80,6 +80,6 @@ class __TwigTemplate_998b5511d0394c5336d09a692a456b45e5df1c8f346a6d75eb8d6a1b62f
 {% if trace.file is defined and trace.line is defined %}
         in {{ trace.file }} line {{ trace.line }}
 {% endif %}
-", "TwigBundle:Exception:trace.txt.twig", "/opt/lampp/htdocs/ssei-master/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/trace.txt.twig");
+", "TwigBundle:Exception:trace.txt.twig", "/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/trace.txt.twig");
     }
 }

@@ -37,7 +37,7 @@ class Indicateur
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Type",cascade={"persist","remove"})
+     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Type",cascade={"persist"})
      */
     private $types;
 
@@ -57,7 +57,7 @@ class Indicateur
     private $modeCalcul;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Subdivision",cascade={"persist","remove"})
+     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Subdivision",cascade={"persist"})
      */
     private $subdivisions;
 
@@ -70,6 +70,11 @@ class Indicateur
      * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\SousSecteur",cascade={"persist"})
      */
     private $sousSecteur;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\Descriptif_par_ui",mappedBy="indicateur", cascade={"remove"})
+     */
+    private $descriptif_par_ui;
 
     /**
      * Get id

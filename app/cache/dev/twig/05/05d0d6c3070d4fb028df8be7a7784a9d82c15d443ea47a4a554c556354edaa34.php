@@ -15,8 +15,8 @@ class __TwigTemplate_de2fe8fb8b7cc72beab2156ef0ee0bdaa0d5d3fc7262fbca915dc7f8c60
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a8dfe578d5befc806999985980ad31bdb480391024835e8b1c7b69f2b859dcb5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a8dfe578d5befc806999985980ad31bdb480391024835e8b1c7b69f2b859dcb5->enter($__internal_a8dfe578d5befc806999985980ad31bdb480391024835e8b1c7b69f2b859dcb5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:explain.html.twig"));
+        $__internal_9de3e422f0bcd1dc889724cf9e524188e8f2ffa2c79078be7ea5db47f61a3c51 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9de3e422f0bcd1dc889724cf9e524188e8f2ffa2c79078be7ea5db47f61a3c51->enter($__internal_9de3e422f0bcd1dc889724cf9e524188e8f2ffa2c79078be7ea5db47f61a3c51_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:explain.html.twig"));
 
         // line 1
         if ((twig_length_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : $this->getContext($context, "data")), 0, array(), "array")) > 1)) {
@@ -98,7 +98,7 @@ class __TwigTemplate_de2fe8fb8b7cc72beab2156ef0ee0bdaa0d5d3fc7262fbca915dc7f8c60
 ";
         }
         
-        $__internal_a8dfe578d5befc806999985980ad31bdb480391024835e8b1c7b69f2b859dcb5->leave($__internal_a8dfe578d5befc806999985980ad31bdb480391024835e8b1c7b69f2b859dcb5_prof);
+        $__internal_9de3e422f0bcd1dc889724cf9e524188e8f2ffa2c79078be7ea5db47f61a3c51->leave($__internal_9de3e422f0bcd1dc889724cf9e524188e8f2ffa2c79078be7ea5db47f61a3c51_prof);
 
     }
 
@@ -155,6 +155,6 @@ class __TwigTemplate_de2fe8fb8b7cc72beab2156ef0ee0bdaa0d5d3fc7262fbca915dc7f8c60
         {%- endfor -%}
     </pre>
 {% endif %}
-", "DoctrineBundle:Collector:explain.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "DoctrineBundle:Collector:explain.html.twig", "/opt/lampp/htdocs/ssei/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

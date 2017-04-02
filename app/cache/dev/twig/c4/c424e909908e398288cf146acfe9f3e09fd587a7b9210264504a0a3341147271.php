@@ -15,8 +15,8 @@ class __TwigTemplate_b03bdee487e62cb79a91e3e16651e29591eb4bf1b006ddafee2d127ae8b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_013a2af1490c5f1737dd30c2fde5c28925e6c17a8fef42808776d04a9f672836 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_013a2af1490c5f1737dd30c2fde5c28925e6c17a8fef42808776d04a9f672836->enter($__internal_013a2af1490c5f1737dd30c2fde5c28925e6c17a8fef42808776d04a9f672836_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:edit_content.html.twig"));
+        $__internal_d292b1410be434aa970061db7a0930ee60bb794a2ca805624001b9eba50d14a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d292b1410be434aa970061db7a0930ee60bb794a2ca805624001b9eba50d14a3->enter($__internal_d292b1410be434aa970061db7a0930ee60bb794a2ca805624001b9eba50d14a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:edit_content.html.twig"));
 
         // line 2
         echo "
@@ -40,7 +40,7 @@ class __TwigTemplate_b03bdee487e62cb79a91e3e16651e29591eb4bf1b006ddafee2d127ae8b
         echo "
 ";
         
-        $__internal_013a2af1490c5f1737dd30c2fde5c28925e6c17a8fef42808776d04a9f672836->leave($__internal_013a2af1490c5f1737dd30c2fde5c28925e6c17a8fef42808776d04a9f672836_prof);
+        $__internal_d292b1410be434aa970061db7a0930ee60bb794a2ca805624001b9eba50d14a3->leave($__internal_d292b1410be434aa970061db7a0930ee60bb794a2ca805624001b9eba50d14a3_prof);
 
     }
 
@@ -77,6 +77,6 @@ class __TwigTemplate_b03bdee487e62cb79a91e3e16651e29591eb4bf1b006ddafee2d127ae8b
         <input type=\"submit\" value=\"{{ 'profile.edit.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "FOSUserBundle:Profile:edit_content.html.twig", "/opt/lampp/htdocs/ssei-master/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig");
+", "FOSUserBundle:Profile:edit_content.html.twig", "/opt/lampp/htdocs/ssei/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig");
     }
 }

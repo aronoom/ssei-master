@@ -15,8 +15,8 @@ class __TwigTemplate_e76221a16ab69e4481d8995079f5ed30cf49b22d257c1ed82589c14fea6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_97a008873269cb30d7e3a0db0e5fa16c547193d8b78847f84472c70ac577750b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_97a008873269cb30d7e3a0db0e5fa16c547193d8b78847f84472c70ac577750b->enter($__internal_97a008873269cb30d7e3a0db0e5fa16c547193d8b78847f84472c70ac577750b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:new_content.html.twig"));
+        $__internal_b74ebefc0919fcdec0e8fe4af5f74096303c55e78769e93f02a81763a4b09915 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b74ebefc0919fcdec0e8fe4af5f74096303c55e78769e93f02a81763a4b09915->enter($__internal_b74ebefc0919fcdec0e8fe4af5f74096303c55e78769e93f02a81763a4b09915_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:new_content.html.twig"));
 
         // line 1
         echo "<form action=\"";
@@ -37,7 +37,7 @@ class __TwigTemplate_e76221a16ab69e4481d8995079f5ed30cf49b22d257c1ed82589c14fea6
 </form>
 ";
         
-        $__internal_97a008873269cb30d7e3a0db0e5fa16c547193d8b78847f84472c70ac577750b->leave($__internal_97a008873269cb30d7e3a0db0e5fa16c547193d8b78847f84472c70ac577750b_prof);
+        $__internal_b74ebefc0919fcdec0e8fe4af5f74096303c55e78769e93f02a81763a4b09915->leave($__internal_b74ebefc0919fcdec0e8fe4af5f74096303c55e78769e93f02a81763a4b09915_prof);
 
     }
 
@@ -72,6 +72,6 @@ class __TwigTemplate_e76221a16ab69e4481d8995079f5ed30cf49b22d257c1ed82589c14fea6
         <input type=\"submit\" value=\"{{ 'group.new.submit'|trans([], 'FOSUserBundle') }}\" />
     </div>
 </form>
-", "FOSUserBundle:Group:new_content.html.twig", "/opt/lampp/htdocs/ssei-master/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Group/new_content.html.twig");
+", "FOSUserBundle:Group:new_content.html.twig", "/opt/lampp/htdocs/ssei/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Group/new_content.html.twig");
     }
 }
