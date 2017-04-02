@@ -15,8 +15,8 @@ class __TwigTemplate_4a8e5b2d4cfd52456ffcbfe7aba78f61ad79cb57c7fe00a94810755fa21
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e65379621fc7de541b9c64f0312320114f2761b280a5757459ca197a47a16b8f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e65379621fc7de541b9c64f0312320114f2761b280a5757459ca197a47a16b8f->enter($__internal_e65379621fc7de541b9c64f0312320114f2761b280a5757459ca197a47a16b8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Resetting:reset_content.html.twig"));
+        $__internal_0891bda8babbae32eab25c2284f40854bcbf2c7f1a74b4cfb0ad80b740c461e7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0891bda8babbae32eab25c2284f40854bcbf2c7f1a74b4cfb0ad80b740c461e7->enter($__internal_0891bda8babbae32eab25c2284f40854bcbf2c7f1a74b4cfb0ad80b740c461e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Resetting:reset_content.html.twig"));
 
         // line 1
         echo "<form action=\"";
@@ -37,7 +37,7 @@ class __TwigTemplate_4a8e5b2d4cfd52456ffcbfe7aba78f61ad79cb57c7fe00a94810755fa21
 </form>
 ";
         
-        $__internal_e65379621fc7de541b9c64f0312320114f2761b280a5757459ca197a47a16b8f->leave($__internal_e65379621fc7de541b9c64f0312320114f2761b280a5757459ca197a47a16b8f_prof);
+        $__internal_0891bda8babbae32eab25c2284f40854bcbf2c7f1a74b4cfb0ad80b740c461e7->leave($__internal_0891bda8babbae32eab25c2284f40854bcbf2c7f1a74b4cfb0ad80b740c461e7_prof);
 
     }
 
